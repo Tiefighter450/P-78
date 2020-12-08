@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="load()">
+        <center>
+            <h1>
+                My Family Members
+            </h1>
+            <img id="page">
+            <h3 id="name">
+                
+            </h3>
+            <span>
+                <button id="buttonNext" onclick="next()">Next</button>
+            </span>
+        </center>
+        <script>
+            i = 0;
+            var familyMembers = ["https://d28hgpri8am2if.cloudfront.net/book_images/cvr9781606524855_9781606524855_hr.jpg", "http://www.lifewiththequirkyboys.com/wp-content/uploads/2015/04/Cupcake-Mom.jpg", "https://thumbs.dreamstime.com/b/father-portrait-handsome-man-shirt-jeans-sweater-wearing-glasses-cartoon-character-standing-dad-vector-illustration-86364395.jpg", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YEBDUT7OZVmertGFHxI50wAAAA%26pid%3DApi&f=1", "https://i.ytimg.com/vi/rU8ygyLuuIU/maxresdefault.jpg"];
+            function next() {
+                i++;
+                if (i > 4) {
+                    i = 0;
+                }
+                if (i == 0) {
+                    document.getElementById("name").innerHTML = "Title";
+                }
+                if (i == 1) {
+                    document.getElementById("name").innerHTML = "Shreevijay's mom";
+                }
+                if (i == 2) {
+                    document.getElementById("name").innerHTML = "Shreevijay's dad";
+                }
+                if (i == 3) {
+                    document.getElementById("name").innerHTML = "Shreevijay";
+                }
+                if (i == 4) {
+                    document.getElementById("name").innerHTML = "End";
+                }
+                document.getElementById("page").src = familyMembers[i];
+            }
+            function load() {
+                i = 0;
+                document.getElementById("page").src = familyMembers[i];
+                if (i == 0) {
+                    document.getElementById("name").innerHTML = "Title";
+                }
+            }
+        </script>
+    </body>
+</html>
